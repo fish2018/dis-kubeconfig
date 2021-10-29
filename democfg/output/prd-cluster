@@ -1,0 +1,25 @@
+apiVersion: v1
+clusters:
+  cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJpVENDQVM2Z0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQTdNUnd3R2dZRFZRUUtFeE5rZVc1aGJXbGoKYkdsemRHVnVaWEl0YjNKbk1Sc3dHUVlEVlFRREV4SmtlVzVoYldsamJHbHpkR1Z1WlhJdFkyRXdIaGNOTWpBdwpPREU0TVRBeE5qQXpXaGNOTXpBd09ERTJNVEF4TmpBeldqQTdNUnd3R2dZRFZRUUtFeE5rZVc1aGJXbGpiR2x6CmRHVnVaWEl0YjNKbk1Sc3dHUVlEVlFRREV4SmtlVzVoYldsamJHbHpkR1Z1WlhJdFkyRXdXVEFUQmdjcWhrak8KUFFJQkJnZ3Foa2pPUFFNQkJ3TkNBQVJENnJ2amMrak9QWGFvQnh1YkNzRk9WVUlGdzZ6QTZRSzUwbEtna1BpNgpBNVlyZE5pNEd1OXhxZHhUdFFKc0lEdEVSZ1k1dWN3UWxYN3JOMXp1MW50NG95TXdJVEFPQmdOVkhROEJBZjhFCkJBTUNBcVF3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFLQmdncWhrak9QUVFEQWdOSkFEQkdBaUVBdysyVjdhNW0KeVpQSEVtV09EM2J4NEcwcXB2b0hDZjFOZTdGZ3FsL04vTEVDSVFEYjNUMHBhZXpGYVRtMWluL0g2VEVCUy9MVwpKOTNDaXFDQXVjUTRZeFl5cHc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t
+    server: https://k8s.demo.com/k8s/clusters/c-27dm8
+  name: prd-cluster
+contexts:
+- context:
+    cluster: prd-cluster
+    user: prd-user
+  name: prd-context
+- context:
+    cluster: prd-cluster
+    user: test-user02
+  name: prd-context02
+current-context: prd-context02
+kind: Config
+preferences: {}
+users:
+- name: prd-user
+  user:
+    token: kubeconfig-user-s99ns.c-27dm8:wfdmnqbpch9rprkntpxs4h8hzv8nhv2nnj4x2qzfw9hrgp9m8ft000
+- name: test-user02
+  user:
+    token: kubeconfig-user-s99ns.c-55xkf:wppwmnwbmpx6jl4nfx9nzgkd7r6g7lrrvk526lj2s2ccgqjvglt222
